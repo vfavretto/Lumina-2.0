@@ -5,7 +5,9 @@
     --fundo-1: #262625;
     --ativo: #12A19A;
 }
-
+.body {
+    background-color: #262625;
+}
 .carousel-indicators {
     margin-bottom: 2.8rem;
 }
