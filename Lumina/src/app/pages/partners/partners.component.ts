@@ -1,13 +1,21 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-partners',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './partners.component.html',
-  styleUrl: './partners.component.css'
+  styleUrls: ['./partners.component.css']
 })
 export class PartnersComponent {
 
+  troca(event: Event): void {
+    const button = event.target as HTMLButtonElement;
+
+    // Remove a classe 'ativo' de todos os botões
+    const botoes = document.querySelectorAll('.botoesPrincipais button');
+    botoes.forEach(btn => btn.classList.remove('ativo'));
+
+    // Adiciona a classe 'ativo' apenas ao botão clicado
+    button.classList.add('ativo');
+  }
 }
