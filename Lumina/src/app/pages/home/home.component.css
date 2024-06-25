@@ -103,7 +103,7 @@ h1 {
 }
 
 .homeBlog {
-    background-image: linear-gradient(180deg, rgba(38, 38, 37, 0.00) 0%, #262625 100%), url(../../assets/img/homeFundoBlog.png);
+    background-image: linear-gradient(180deg, rgba(38, 38, 37, 0.00) 0%, #262625 100%), url(../../../assets/img/homeFundoBlog.png);
     background-size: cover;
 }
 
