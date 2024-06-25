@@ -1,0 +1,14 @@
+.fundo {
+    background-color: #262625;
+}
+
+.imagemBaixo {
+    margin-bottom: 0%;
+    padding: 0px;
+}
+
+.baixoImg {
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    margin-top: 0%;
+}
