@@ -11,3 +11,5 @@ npm i fontawesome
 Npm i -g @angular/cli
 
 Ng add @angular/material
+
+ng add @fortawesome/angular-fontawesome
