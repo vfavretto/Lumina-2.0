@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { provideRouter, RouterModule } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BlogComponent } from './pages/blog/blog.component';
@@ -38,6 +37,3 @@ export const routes: Routes = [
         component: PartnersComponent
     },
 ];
-export const appRoutingProviders: any[] = [];
-
-export const routing = RouterModule.forRoot(routes);
