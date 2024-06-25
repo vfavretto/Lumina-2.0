@@ -2,6 +2,8 @@
 
 PARA RODAR: 
 
+https://nodejs.org/en/download/package-manager
+
 npm i bootstrap
 
 npm i fontawesome
