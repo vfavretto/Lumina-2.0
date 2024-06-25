@@ -6,6 +6,10 @@
     --ativo: #12A19A;
 }
 
+.body {
+    background-color: #262625;
+}
+
 .carousel-indicators {
     margin-bottom: 2.8rem;
 }
@@ -128,6 +132,10 @@ h1 {
     background: none;
 }
 
+.itemBlog .card img {
+    max-width: 800px;
+}
+
 .itemBlog .card .card-body {
     display: flex;
     flex-direction: column;
@@ -191,4 +199,5 @@ h1 {
 
     .imgBlog {
         width: 100%;
-    }}
+    }
+}

@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { VerificaCredenciaisService } from '../../verifica-credenciais.service';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +24,8 @@ export class LoginComponent {
     password: '',
   }
 
-  router = inject(Router);
+
+  constructor(private verificaCredenciaisService: VerificaCredenciaisService, private router: Router) { }
 
   onRegister() {
     debugger;
@@ -41,19 +43,12 @@ export class LoginComponent {
   }
 
   onLogin() {
-    debugger;
-    const isLocalData = localStorage.getItem("angular18Local");
-    if (isLocalData != null) {
-      const users = JSON.parse(isLocalData);
-
-      const isUserFound = users.find((m: any) => m.userName == this.userLogin.userName && m.password == this.userLogin.password);
-      if (isUserFound != undefined) {
-        this.router.navigateByUrl('perfil')
-      } else {
-        alert("User name or password is Wrong")
-      }
+    const isUserAuthenticated = this.verificaCredenciaisService.autenticarUsuario(this.userLogin);
+    if (isUserAuthenticated) {
+      this.router.navigate(['/profile']);
     } else {
-      alert("No User Found")
+      alert("User name or password is Wrong")
     }
   }
+  
 }
