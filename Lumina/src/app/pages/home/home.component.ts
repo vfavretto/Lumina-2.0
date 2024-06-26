@@ -1,10 +1,11 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, ElementRef, Inject, OnInit, PLATFORM_ID, Renderer2 } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
